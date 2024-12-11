@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Pulse Shopping Cart</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">TECH PULSE</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+        </div>
+    </header>
+    <div class="body">
+        <div class="container">
+            <h3 class="heading">PRODUCTS</h3>
+            <div class="result"></div>
+        </div>
+        <div class="cart">
+            <div class="cart-header">
+                <h3>YOUR CART</h3>
+                <button id="buyBtn" class="buy-btn">CHECKOUT</button>
+            </div>
+            <div class="cart-items"></div>
+            <div class="cart-footer">
+                <p class="noOfItems">0 items</p>
+                <p class="total">₱0</p>
+            </div>
+        </div>
+        
+        <div class="receipt" style="display: none;">
+            <h2>RECEIPT</h2>
+            <div class="receipt-content"></div>
+            <div class="receipt-footer">
+                <strong>Total Amount: </strong><span class="total-amount"></span>
+                <button id="showCartBtn" style="display: none;">Return to Cart</button>
+        </div>
+    </div>
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2><b> PAYMENT DETAILS </b></h2>
+            <form class="payment-form" id="paymentForm">
+                <input type="text" placeholder="Name on Card" required>
+                <input type="text" placeholder="Credit Card Number" maxlength="16" required>
+                <input type="text" placeholder="Expiration Date (MM/YY)" required>
+                <input type="text" placeholder="CVV" maxlength="3" required>
+                <button type="submit" class="submit-payment"><b>SUBMIT PAYMENT</b></button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
